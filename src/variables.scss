@@ -1,0 +1,97 @@
+// Set generic variables
+$body-background-color: hsl(0, 0%, 10%);
+$body-color: hsl(0, 0%, 96%);
+$strong-color: hsl(0, 0%, 100%);
+
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: hsl(0, 0%, 7%);
+$primary-invert: findColorInvert($primary);
+$ncsu: #cc0000;
+$ncsu-invert: findColorInvert($primary);
+$paypal: #f6d376;
+$paypal-invert: findColorInvert($paypal);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": (
+        $white,
+        $black
+    ),
+    "black": (
+        $black,
+        $white
+    ),
+    "light": (
+        $light,
+        $light-invert
+    ),
+    "dark": (
+        $dark,
+        $dark-invert
+    ),
+    "primary": (
+        $primary,
+        $primary-invert
+    ),
+    "info": (
+        $info,
+        $info-invert
+    ),
+    "success": (
+        $success,
+        $success-invert
+    ),
+    "warning": (
+        $warning,
+        $warning-invert
+    ),
+    "danger": (
+        $danger,
+        $danger-invert
+    ),
+    "ncsu": (
+        $ncsu,
+        $ncsu-invert
+    ),
+    "paypal": (
+        $paypal,
+        $paypal-invert
+    )
+);
+
+// Set colors to be dark theme
+$scheme-main: $black;
+$scheme-main-bis: $black-bis;
+$scheme-main-ter: $black-ter;
+
+$scheme-invert: $white;
+$scheme-invert-bis: $white-bis;
+$scheme-invert-ter: $white-ter;
+
+$text-light: hsl(0, 0%, 52%);
+$text-strong: hsl(0, 0%, 79%);
+
+$footer-background-color: $scheme-main-bis;
+
+// Links
+$link: lighten($ncsu, 10%);
+$link-hover: $ncsu;
+$link-invert: $ncsu-invert;
+$link-focus-border: $ncsu;
+
+// Input updates so they aren't red
+$input-focus-border-color: $info;
+$input-focus-box-shadow-color: rgba($info, 0.25);
+$input-arrow: $info;
+
+// Set the padding on the container
+$gap: 128px;
+
+// Set padding on sections
+$section-padding: 1.5rem 1.5rem 0rem;
+
+// Set more reasonable padding on footer
+$footer-padding: 3rem 1.5rem 1.5rem;
