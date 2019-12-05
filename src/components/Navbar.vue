@@ -13,7 +13,35 @@
                 </a>
             </div>
             <div class="navbar-menu">
-                <div class="navbar-end"></div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a
+                            href="https://www.youtube.com/channel/UCv1jpayMcbWAi-hcte3glNg"
+                            target="_blank"
+                            class="icon has-text-grey is-medium"
+                        >
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a
+                            href="https://www.twitch.tv/fullmoonrobotics"
+                            target="_blank"
+                            class="icon has-text-grey is-medium"
+                        >
+                            <i class="fab fa-twitch fa-lg"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a
+                            href="https://github.com/Full-Moon-Robotics/"
+                            target="_blank"
+                            class="icon has-text-grey is-medium"
+                        >
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -23,7 +51,11 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss">
+a.icon {
+    cursor: pointer;
+}
+</style>
 
 <static-query>
 query {
