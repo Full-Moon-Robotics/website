@@ -7,9 +7,12 @@
         <div class="container">
             <div class="navbar-brand">
                 <a href class="navbar-item">
-                    <strong>
-                        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-                    </strong>
+                    <g-link to="/">
+                        <g-image
+                            alt="Full Moon Robotics"
+                            src="~/assets/text_logo.png"
+                        />
+                    </g-link>
                 </a>
             </div>
             <div class="navbar-menu">
@@ -54,6 +57,13 @@ export default {};
 <style lang="scss">
 a.icon {
     cursor: pointer;
+}
+
+.navbar-brand {
+    img {
+        // max-width: 1.75rem;
+        width: auto;
+    }
 }
 </style>
 
