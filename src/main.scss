@@ -1,13 +1,12 @@
 // Import variables
 @import "~/variables.scss";
-
 // Import Bulma and Buefy styles
 @import "~bulma/bulma";
 @import "~buefy/src/scss/buefy";
-
 // Special settings to make sure the footer grows to full height
 html,
 body,
 #app {
     min-height: 100vh;
+    overflow: auto;
 }

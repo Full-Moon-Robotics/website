@@ -16,6 +16,15 @@
                 </a>
             </div>
             <div class="navbar-menu">
+                <div class="navbar-start">
+                    <g-link
+                        class="navbar-item"
+                        v-for="(link, i) in $static.navbar.links"
+                        :key="i"
+                        :to="link.data.url"
+                        >{{ link.data.name }}</g-link
+                    >
+                </div>
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <a
@@ -55,8 +64,13 @@ export default {};
 </script>
 
 <style lang="scss">
+@import "~/variables.scss";
 a.icon {
     cursor: pointer;
+}
+
+a.navbar-item {
+    color: $grey !important;
 }
 
 .navbar-brand {
@@ -69,8 +83,16 @@ a.icon {
 
 <static-query>
 query {
-  metadata {
-    siteName
-  }
+    metadata {
+        siteName
+    }
+    navbar: allContentfulNavbarItem {
+        links: edges {
+            data: node {
+                name: itemName
+                url: urlPath
+            }
+        }
+    }
 }
 </static-query>
