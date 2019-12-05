@@ -15,5 +15,8 @@ module.exports = {
             environment: "master",
             typeName: "Contentful"
         }
-    }]
+    }],
+    templates: {
+        ContentfulAboutPage: "/:year/about"
+    }
 };
