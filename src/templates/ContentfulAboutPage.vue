@@ -25,7 +25,7 @@ export default {
     },
     metaInfo() {
         return {
-            title: this.$page.page.title
+            title: `About (${this.$page.page.year})`
         };
     }
 };

@@ -6,14 +6,14 @@
     >
         <div class="container">
             <div class="navbar-brand">
-                <a href class="navbar-item">
+                <div class="navbar-item">
                     <g-link to="/">
                         <g-image
                             alt="Full Moon Robotics"
                             src="~/assets/text_logo.png"
                         />
                     </g-link>
-                </a>
+                </div>
             </div>
             <div class="navbar-menu">
                 <div class="navbar-start">
