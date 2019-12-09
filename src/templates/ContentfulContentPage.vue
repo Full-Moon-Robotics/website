@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <h1 class="title">
-            About <span class="tag is-dark">{{ $page.page.year }} Season</span>
+            {{$page.page.title}} <span class="tag is-dark">{{ $page.page.year }} Season</span>
         </h1>
         <div v-html="richTextToHTML($page.page.content)"></div>
     </Layout>
@@ -25,7 +25,7 @@ export default {
     },
     metaInfo() {
         return {
-            title: `About (${this.$page.page.year})`
+            title: `${this.$page.page.title} (${this.$page.page.year})`
         };
     }
 };
@@ -35,7 +35,7 @@ export default {
 
 <page-query>
 query ($id: ID!) {
-    page: contentfulAboutPage(id: $id) {
+    page: contentfulContentPage(id: $id) {
         title
         updatedAt
         year
