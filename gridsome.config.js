@@ -19,6 +19,7 @@ module.exports = {
         }
     ],
     templates: {
-        ContentfulContentPage: "/:year/:slug"
+        ContentfulContentPage: "/:year/:slug",
+        ContentfulQuickNote: "/:year/notes/:id"
     }
 };
