@@ -6,19 +6,40 @@
             Our website is still under construction! Please bear with us as we
             prepare for the season!
         </p>
+
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
     </Layout>
 </template>
 
 <script>
+import "~/../lib/twitch-embed.v1.min.js";
+
 export default {
     metaInfo: {
         title: "Hello, world!"
+    },
+    mounted() {
+        new Twitch.Embed("twitch-embed", {
+            width: "100%",
+            height: 640,
+            theme: "dark",
+            channel: "fullmoonrobotics"
+        });
     }
 };
 </script>
 
-<style>
+<style lang="scss">
 .home-links a {
     margin-right: 1rem;
+}
+
+#twitch-embed {
+    min-height: 640px;
+
+    iframe {
+        min-height: 640px;
+    }
 }
 </style>
