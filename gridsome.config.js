@@ -20,6 +20,7 @@ module.exports = {
     ],
     templates: {
         ContentfulContentPage: "/:year/:slug",
-        ContentfulQuickNote: "/:year/notes/:id"
+        ContentfulQuickNote: "/:year/notes/:id",
+        ContentfulBlogPost: "/blog/:year/:slug"
     }
 };
