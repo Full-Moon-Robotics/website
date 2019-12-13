@@ -27,6 +27,11 @@
                 </div>
                 <div class="navbar-end">
                     <div class="navbar-item">
+                        <g-link to="/blog" class="button is-dark"
+                            >Read our Blog</g-link
+                        >
+                    </div>
+                    <div class="navbar-item">
                         <a
                             href="https://www.youtube.com/channel/UCv1jpayMcbWAi-hcte3glNg"
                             target="_blank"
