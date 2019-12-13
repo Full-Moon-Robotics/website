@@ -13,18 +13,18 @@
 </template>
 
 <script>
-import "~/../lib/twitch-embed.v1.min.js";
-
 export default {
     metaInfo: {
         title: "Hello, world!"
     },
     mounted() {
-        new Twitch.Embed("twitch-embed", {
-            width: "100%",
-            height: 640,
-            theme: "dark",
-            channel: "fullmoonrobotics"
+        import("~/../lib/twitch-embed.v1.min.js").then(m => {
+            new Twitch.Embed("twitch-embed", {
+                width: "100%",
+                height: 640,
+                theme: "dark",
+                channel: "fullmoonrobotics"
+            });
         });
     }
 };
