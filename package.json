@@ -8,7 +8,7 @@
     "dependencies": {
         "@contentful/rich-text-html-renderer": "^13.4.0",
         "@contentful/rich-text-types": "^13.4.0",
-        "@gridsome/source-contentful": "github:weaversam8/gridsome-source-contentful#issue-864-fix",
+        "@gridsome/source-contentful": "^0.5.2",
         "buefy": "^0.8.8",
         "gridsome": "^0.7.0",
         "node-sass": "^4.13.0",
