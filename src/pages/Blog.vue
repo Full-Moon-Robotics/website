@@ -26,6 +26,7 @@
                                     :to="`/blog/${post.year}/${post.slug}`"
                                     class="title is-6"
                                 >{{ post.title }}</g-link>
+                                <p class="is-size-7">{{post.description}}</p>
                             </div>
                         </div>
                     </div>
@@ -80,6 +81,7 @@ query {
                 year
                 slug
                 title
+                description
                 updatedAt
                 authors {
                     name,
