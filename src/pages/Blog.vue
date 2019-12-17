@@ -54,13 +54,21 @@ const meta = {
 export default {
     metaInfo: {
         title: "Blog",
-        "og:url": meta.url,
-        "twitter:url": meta.url,
-        "og:title": "Blog - Full Moon Robotics",
-        "twitter:title": "Blog - Full Moon Robotics",
-        description: meta.description,
-        "og:description": meta.description,
-        "twitter:description": meta.description
+        meta: [
+            { property: "og:url", content: meta.url },
+            { property: "twitter:url", content: meta.url },
+            {
+                property: "og:title",
+                content: `Blog - Full Moon Robotics`
+            },
+            {
+                property: "twitter:title",
+                content: `Blog - Full Moon Robotics`
+            },
+            { name: "description", content: meta.description },
+            { property: "og:description", content: meta.description },
+            { property: "twitter:description", content: meta.description }
+        ]
     },
     mounted() {
         console.log(this.$static.query);

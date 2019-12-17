@@ -22,13 +22,21 @@ const meta = {
 export default {
     metaInfo: {
         title: "Home",
-        "og:url": meta.url,
-        "twitter:url": meta.url,
-        "og:title": "Home - Full Moon Robotics",
-        "twitter:title": "Home - Full Moon Robotics",
-        description: meta.description,
-        "og:description": meta.description,
-        "twitter:description": meta.description
+        meta: [
+            { property: "og:url", content: meta.url },
+            { property: "twitter:url", content: meta.url },
+            {
+                property: "og:title",
+                content: `Home - Full Moon Robotics`
+            },
+            {
+                property: "twitter:title",
+                content: `Home - Full Moon Robotics`
+            },
+            { name: "description", content: meta.description },
+            { property: "og:description", content: meta.description },
+            { property: "twitter:description", content: meta.description }
+        ]
     },
     mounted() {
         import("~/../lib/twitch-embed.v1.min.js").then(m => {

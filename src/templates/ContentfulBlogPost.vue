@@ -32,18 +32,26 @@ export default {
         MemberHeadshots
     },
     metaInfo() {
-        const title = `FMR ${this.$page.page.year} Blog - ${this.$page.page.title}`;
+        const title = `${this.$page.page.title} - ${this.$page.page.year} Blog`;
         const description = `${this.$page.page.description}`;
         const url = `https://fullmoonrobotics.org/blog/${this.$page.page.year}/${this.$page.page.slug}/`;
         return {
             title,
-            "og:url": url,
-            "twitter:url": url,
-            "og:title": title,
-            "twitter:title": title,
-            description,
-            "og:description": description,
-            "twitter:description": description
+            meta: [
+                { property: "og:url", content: url },
+                { property: "twitter:url", content: url },
+                {
+                    property: "og:title",
+                    content: `${title} - Full Moon Robotics`
+                },
+                {
+                    property: "twitter:title",
+                    content: `${title} - Full Moon Robotics`
+                },
+                { name: "description", content: description },
+                { property: "og:description", content: description },
+                { property: "twitter:description", content: description }
+            ]
         };
     }
 };

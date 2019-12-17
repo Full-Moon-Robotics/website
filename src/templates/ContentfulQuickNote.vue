@@ -27,18 +27,26 @@ export default {
         }
     },
     metaInfo() {
-        const title = `FMR Quick Note ${this.$page.page.id} (${this.$page.page.year})`;
+        const title = `Quick Note ${this.$page.page.id} (${this.$page.page.year})`;
         const description = `This is a quick note from Full Moon Robotics.`;
         const url = `https://fullmoonrobotics.org/${this.$page.page.year}/notes/${this.$page.page.id}/`;
         return {
             title,
-            "og:url": url,
-            "twitter:url": url,
-            "og:title": title,
-            "twitter:title": title,
-            description,
-            "og:description": description,
-            "twitter:description": description
+            meta: [
+                { property: "og:url", content: url },
+                { property: "twitter:url", content: url },
+                {
+                    property: "og:title",
+                    content: `${title} - Full Moon Robotics`
+                },
+                {
+                    property: "twitter:title",
+                    content: `${title} - Full Moon Robotics`
+                },
+                { name: "description", content: description },
+                { property: "og:description", content: description },
+                { property: "twitter:description", content: description }
+            ]
         };
     }
 };
