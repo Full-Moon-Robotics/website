@@ -13,9 +13,22 @@
 </template>
 
 <script>
+const meta = {
+    url: "https://fullmoonrobotics.org/",
+    description:
+        "This is the homepage for the Full Moon Robotics Robot in 3 Days Team."
+};
+
 export default {
     metaInfo: {
-        title: "Hello, world!"
+        title: "Home",
+        "og:url": meta.url,
+        "twitter:url": meta.url,
+        "og:title": "Home - Full Moon Robotics",
+        "twitter:title": "Home - Full Moon Robotics",
+        description: meta.description,
+        "og:description": meta.description,
+        "twitter:description": meta.description
     },
     mounted() {
         import("~/../lib/twitch-embed.v1.min.js").then(m => {

@@ -1,18 +1,12 @@
 <template>
     <Layout>
-        <h1 class="title">
-            Full Moon Robotics Blog
-        </h1>
-        <h2 class="subtitle is-5 has-text-weight-normal">
-            All our content from the build, plus articles and tutorials on FRC.
-        </h2>
+        <h1 class="title">Full Moon Robotics Blog</h1>
+        <h2
+            class="subtitle is-5 has-text-weight-normal"
+        >All our content from the build, plus articles and tutorials on FRC.</h2>
 
         <div class="columns is-multiline is-1 is-variable">
-            <div
-                class="column is-3"
-                v-for="({ data: post }, i) in $static.query.posts"
-                :key="i"
-            >
+            <div class="column is-3" v-for="({ data: post }, i) in $static.query.posts" :key="i">
                 <div class="card">
                     <!-- <div class="card-image">
                         <figure class="image is-1by1">
@@ -24,24 +18,21 @@
                                 fit="outside"
                             />
                         </figure>
-                    </div> -->
+                    </div>-->
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
                                 <g-link
                                     :to="`/blog/${post.year}/${post.slug}`"
                                     class="title is-6"
-                                    >{{ post.title }}</g-link
-                                >
+                                >{{ post.title }}</g-link>
                             </div>
                         </div>
                     </div>
                     <div class="card-content tag-container">
                         <div class="media">
                             <div class="media-content">
-                                <span class="tag is-dark"
-                                    >{{ post.year }} Season</span
-                                >
+                                <span class="tag is-dark">{{ post.year }} Season</span>
                             </div>
                         </div>
                     </div>
@@ -54,7 +45,22 @@
 <script>
 import LeadershipHeadshots from "~/components/LeadershipHeadshots.vue";
 
+const meta = {
+    url: "https://fullmoonrobotics.org/blog/",
+    description: "This is the homepage for the Full Moon Robotics Blog."
+};
+
 export default {
+    metaInfo: {
+        title: "Blog",
+        "og:url": meta.url,
+        "twitter:url": meta.url,
+        "og:title": "Blog - Full Moon Robotics",
+        "twitter:title": "Blog - Full Moon Robotics",
+        description: meta.description,
+        "og:description": meta.description,
+        "twitter:description": meta.description
+    },
     mounted() {
         console.log(this.$static.query);
     },

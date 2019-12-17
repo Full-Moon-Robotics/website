@@ -27,8 +27,18 @@ export default {
         }
     },
     metaInfo() {
+        const title = `FMR Quick Note ${this.$page.page.id} (${this.$page.page.year})`;
+        const description = `This is a quick note from Full Moon Robotics.`;
+        const url = `https://fullmoonrobotics.org/${this.$page.page.year}/notes/${this.$page.page.id}/`;
         return {
-            title: `Note ${this.$page.page.id} (${this.$page.page.year})`
+            title,
+            "og:url": url,
+            "twitter:url": url,
+            "og:title": title,
+            "twitter:title": title,
+            description,
+            "og:description": description,
+            "twitter:description": description
         };
     }
 };

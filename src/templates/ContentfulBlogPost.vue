@@ -32,8 +32,18 @@ export default {
         MemberHeadshots
     },
     metaInfo() {
+        const title = `FMR ${this.$page.page.year} Blog - ${this.$page.page.title}`;
+        const description = `${this.$page.page.description}`;
+        const url = `https://fullmoonrobotics.org/blog/${this.$page.page.year}/${this.$page.page.slug}/`;
         return {
-            title: `${this.$page.page.year} Blog - ${this.$page.page.title}`
+            title,
+            "og:url": url,
+            "twitter:url": url,
+            "og:title": title,
+            "twitter:title": title,
+            description,
+            "og:description": description,
+            "twitter:description": description
         };
     }
 };
@@ -46,6 +56,8 @@ query ($id: ID!) {
     page: contentfulBlogPost(id: $id) {
         year
         title
+        slug
+        description
         updatedAt
         content
         authors {

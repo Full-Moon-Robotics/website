@@ -1,7 +1,8 @@
 <template>
     <Layout>
         <h1 class="title">
-            {{$page.page.title}} <span class="tag is-dark">{{ $page.page.year }} Season</span>
+            {{$page.page.title}}
+            <span class="tag is-dark">{{ $page.page.year }} Season</span>
         </h1>
         <div v-html="richTextToHTML($page.page.content)"></div>
     </Layout>
@@ -24,8 +25,18 @@ export default {
         }
     },
     metaInfo() {
+        const title = `${this.$page.page.title} (${this.$page.page.year}) - Full Moon Robotics`;
+        const description = `${this.$page.page.description}`;
+        const url = `https://fullmoonrobotics.org/${this.$page.page.year}/${this.$page.page.slug}/`;
         return {
-            title: `${this.$page.page.title} (${this.$page.page.year})`
+            title,
+            "og:url": url,
+            "twitter:url": url,
+            "og:title": title,
+            "twitter:title": title,
+            description,
+            "og:description": description,
+            "twitter:description": description
         };
     }
 };
@@ -37,6 +48,8 @@ export default {
 query ($id: ID!) {
     page: contentfulContentPage(id: $id) {
         title
+        slug
+        description
         updatedAt
         year
         content

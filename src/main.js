@@ -28,4 +28,22 @@ export default function(Vue, { router, head, isClient }) {
 
     // Set default layout as a global component
     Vue.component("Layout", DefaultLayout);
+
+    // Set global metadata
+    head.meta.push({
+        property: "og:type",
+        content: "website"
+    });
+    head.meta.push({
+        property: "twitter:card",
+        content: "summary_large_image"
+    });
+    head.meta.push({
+        property: "og:image",
+        content: "https://fullmoonrobotics.org/social.jpg"
+    });
+    head.meta.push({
+        property: "twitter:image",
+        content: "https://fullmoonrobotics.org/social.jpg"
+    });
 }
