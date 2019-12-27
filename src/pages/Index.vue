@@ -1,10 +1,10 @@
 <template>
     <Layout>
-        <h1>Hello, world!</h1>
+        <h1>Welcome!</h1>
 
         <p class="notification is-primary">
-            Our website is still under construction! Please bear with us as we
-            prepare for the season!
+            There are still a few things we need to add to the website, it isn't quite perfect yet.
+            Feel free to look around, and please bear with us as we prepare for the season!
         </p>
 
         <div id="twitch-embed"></div>
