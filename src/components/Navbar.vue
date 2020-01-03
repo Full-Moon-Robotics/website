@@ -1,67 +1,53 @@
 <template>
-    <nav
-        class="navbar is-primary"
-        role="navigation"
-        aria-label="Main Navigation"
-    >
-        <div class="container">
-            <div class="navbar-brand">
-                <div class="navbar-item">
-                    <g-link to="/">
-                        <g-image
-                            alt="Full Moon Robotics"
-                            src="~/assets/text_logo.png"
-                        />
-                    </g-link>
-                </div>
+    <b-navbar wrapper-class="container">
+        <template slot="brand">
+            <div class="navbar-item">
+                <g-link to="/">
+                    <g-image alt="Full Moon Robotics" src="~/assets/text_logo.png" />
+                </g-link>
             </div>
-            <div class="navbar-menu">
-                <div class="navbar-start">
-                    <g-link
-                        class="navbar-item"
-                        v-for="(link, i) in $static.navbar.links"
-                        :key="i"
-                        :to="link.data.url"
-                        >{{ link.data.name }}</g-link
-                    >
-                </div>
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <g-link to="/blog" class="button is-dark"
-                            >Read our Blog</g-link
-                        >
-                    </div>
-                    <div class="navbar-item">
-                        <a
-                            href="https://www.youtube.com/channel/UCv1jpayMcbWAi-hcte3glNg"
-                            target="_blank"
-                            class="icon has-text-grey is-medium"
-                        >
-                            <i class="fab fa-youtube fa-lg"></i>
-                        </a>
-                    </div>
-                    <div class="navbar-item">
-                        <a
-                            href="https://www.twitch.tv/fullmoonrobotics"
-                            target="_blank"
-                            class="icon has-text-grey is-medium"
-                        >
-                            <i class="fab fa-twitch fa-lg"></i>
-                        </a>
-                    </div>
-                    <div class="navbar-item">
-                        <a
-                            href="https://github.com/Full-Moon-Robotics/"
-                            target="_blank"
-                            class="icon has-text-grey is-medium"
-                        >
-                            <i class="fab fa-github fa-lg"></i>
-                        </a>
-                    </div>
-                </div>
+        </template>
+        <template slot="start">
+            <g-link
+                class="navbar-item"
+                v-for="(link, i) in $static.navbar.links"
+                :key="i"
+                :to="link.data.url"
+            >{{ link.data.name }}</g-link>
+        </template>
+        <template slot="end">
+            <div class="navbar-item">
+                <g-link to="/blog" class="button is-dark">Read our Blog</g-link>
             </div>
-        </div>
-    </nav>
+            <div class="navbar-item">
+                <a
+                    href="https://www.youtube.com/channel/UCv1jpayMcbWAi-hcte3glNg"
+                    target="_blank"
+                    class="icon has-text-grey is-medium"
+                >
+                    <i class="fab fa-youtube fa-lg"></i>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a
+                    href="https://www.twitch.tv/fullmoonrobotics"
+                    target="_blank"
+                    class="icon has-text-grey is-medium"
+                >
+                    <i class="fab fa-twitch fa-lg"></i>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a
+                    href="https://github.com/Full-Moon-Robotics/"
+                    target="_blank"
+                    class="icon has-text-grey is-medium"
+                >
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+            </div>
+        </template>
+    </b-navbar>
 </template>
 
 <script>
@@ -70,6 +56,11 @@ export default {};
 
 <style lang="scss">
 @import "~/variables.scss";
+nav.navbar,
+div.navbar-menu {
+    background-color: $black;
+}
+
 a.icon {
     cursor: pointer;
 }
