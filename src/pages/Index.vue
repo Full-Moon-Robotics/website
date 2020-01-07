@@ -4,8 +4,25 @@
 
         <p class="notification is-primary">
             There are still a few things we need to add to the website, it isn't quite perfect yet.
-            Feel free to look around, and please bear with us as we prepare for the season!
+            Feel free to look around! Most of our content is on
+            <g-link to="/blog">our blog</g-link>&nbsp;and
+            <a
+                href="https://www.youtube.com/channel/UCv1jpayMcbWAi-hcte3glNg"
+                target="_blank"
+            >our YouTube channel</a>!
         </p>
+
+        <div class="notification is-primary">
+            <h4 class="subtitle has-text-centered">Sponsored By</h4>
+            <div class="columns is-vcentered is-variable is-8">
+                <div class="column">
+                    <g-image src="~/assets/logos/commerce_cx.png" />
+                </div>
+                <div class="column">
+                    <g-image src="~/assets/logos/ncsu_libraries.png" />
+                </div>
+            </div>
+        </div>
 
         <div id="twitch-embed"></div>
         <!-- Load the Twitch embed script -->
