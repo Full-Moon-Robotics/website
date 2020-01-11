@@ -21,6 +21,9 @@
                 <div class="column">
                     <g-image src="~/assets/logos/ncsu_libraries.png" />
                 </div>
+                <div class="column">
+                    <h3>NC State Entrepreneurship</h3>
+                </div>
             </div>
         </div>
 
