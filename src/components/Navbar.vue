@@ -23,7 +23,7 @@
                 <a
                     href="https://www.youtube.com/channel/UCv1jpayMcbWAi-hcte3glNg"
                     target="_blank"
-                    class="icon has-text-grey is-medium"
+                    class="icon has-text-red is-medium"
                 >
                     <i class="fab fa-youtube fa-lg"></i>
                 </a>
@@ -32,7 +32,7 @@
                 <a
                     href="https://www.twitch.tv/fullmoonrobotics"
                     target="_blank"
-                    class="icon has-text-grey is-medium"
+                    class="icon has-text-twitch is-medium"
                 >
                     <i class="fab fa-twitch fa-lg"></i>
                 </a>
@@ -41,7 +41,7 @@
                 <a
                     href="https://github.com/Full-Moon-Robotics/"
                     target="_blank"
-                    class="icon has-text-grey is-medium"
+                    class="icon has-text-white is-medium"
                 >
                     <i class="fab fa-github fa-lg"></i>
                 </a>
@@ -67,6 +67,10 @@ a.icon {
 
 a.navbar-item {
     color: $grey !important;
+
+    &:hover {
+        background-color: lighten($black, 10%) !important;
+    }
 }
 
 .navbar-brand {

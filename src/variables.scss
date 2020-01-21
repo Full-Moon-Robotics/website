@@ -13,6 +13,8 @@ $ncsu: #cc0000;
 $ncsu-invert: findColorInvert($primary);
 $paypal: #f6d376;
 $paypal-invert: findColorInvert($paypal);
+$twitch: #9147ff;
+$twitch-invert: findColorInvert($twitch);
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
@@ -59,6 +61,10 @@ $colors: (
     "paypal": (
         $paypal,
         $paypal-invert
+    ),
+    "twitch": (
+        $twitch,
+        $twitch-invert
     )
 );
 
@@ -75,6 +81,14 @@ $text-light: hsl(0, 0%, 52%);
 $text-strong: hsl(0, 0%, 79%);
 
 $footer-background-color: $scheme-main-bis;
+
+$box-background-color: $scheme-main;
+$box-color: $scheme-invert;
+$box-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.075),
+    0 0px 0 1px rgba($scheme-invert, 0.04);
+
+$title-color: $text-strong;
+$subtitle-color: $text-light;
 
 // Links
 $link: lighten($ncsu, 10%);
