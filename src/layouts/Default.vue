@@ -15,10 +15,14 @@
                     <div class="column">
                         <p>
                             Full Moon Robotics is organized by the
-                            <strong>
-                                <i>FIRST</i> Alumni Association at NC
-                                State
-                            </strong>. We are a student organization of
+                            <a
+                                href="https://firstalumniatncstate.org"
+                            >
+                                <strong>
+                                    <i>FIRST</i> Alumni Association at NC
+                                    State
+                                </strong>
+                            </a>. We are a student organization of
                             <a
                                 href="https://ncsu.edu"
                             >North Carolina State University</a>. We work closely with
