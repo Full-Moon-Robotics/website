@@ -15,12 +15,17 @@ export default function(Vue, { router, head, isClient }) {
     // Use Font Awesome Solid Free
     head.link.push({
         rel: "stylesheet",
-        href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css",
+    });
+
+    head.script.push({
+        src: "https://embed.twitch.tv/embed/v1.js",
+        body: true,
     });
 
     // Use Buefy UI library
     Vue.use(Buefy, {
-        defaultIconPack: "fas" // Font Awesome Solid
+        defaultIconPack: "fas", // Font Awesome Solid
     });
 
     // Make the Navbar component available on all pages
@@ -32,18 +37,18 @@ export default function(Vue, { router, head, isClient }) {
     // Set global metadata
     head.meta.push({
         property: "og:type",
-        content: "website"
+        content: "website",
     });
     head.meta.push({
         property: "twitter:card",
-        content: "summary_large_image"
+        content: "summary_large_image",
     });
     head.meta.push({
         property: "og:image",
-        content: "https://fullmoonrobotics.org/social.jpg"
+        content: "https://fullmoonrobotics.org/social.jpg",
     });
     head.meta.push({
         property: "twitter:image",
-        content: "https://fullmoonrobotics.org/social.jpg"
+        content: "https://fullmoonrobotics.org/social.jpg",
     });
 }

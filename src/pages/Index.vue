@@ -160,14 +160,12 @@ export default {
         ],
     },
     mounted() {
-        import("~/../lib/twitch-embed.v1.min.js").then((m) => {
-            new Twitch.Embed("twitch-embed", {
-                width: "100%",
-                height: 640,
-                theme: "dark",
-                channel: "fullmoonrobotics",
-                parent: ["fullmoonrobotics.org"],
-            });
+        new window.Twitch.Embed("twitch-embed", {
+            width: "100%",
+            height: 640,
+            theme: "dark",
+            channel: "fullmoonrobotics",
+            parent: ["fullmoonrobotics.org"],
         });
     },
     components: {
