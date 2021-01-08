@@ -1,13 +1,13 @@
 <template>
-    <div class="is-multiline is-1 is-variable" :class="{'columns': !home}">
+    <div class="is-multiline is-1 is-variable" :class="{ columns: !home }">
         <div
             class="is-3"
-            :class="{'column': !home}"
-            v-for="({ data: post }, i) in $static.query.posts"
+            :class="{ column: !home }"
+            v-for="({ data: post }, i) in yearPosts"
             :key="i"
         >
             <g-link :to="`/blog/${post.year}/${post.slug}`">
-                <div class="card" :class="{home}">
+                <div class="card" :class="{ home }">
                     <!-- <div class="card-image">
                         <figure class="image is-1by1">
                             <g-image
@@ -23,14 +23,16 @@
                         <div class="media">
                             <div class="media-content">
                                 <span class="title is-6">{{ post.title }}</span>
-                                <p class="is-size-7">{{post.description}}</p>
+                                <p class="is-size-7">{{ post.description }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="card-content tag-container">
                         <div class="media">
                             <div class="media-content">
-                                <span class="tag is-dark">{{ post.year }} Season</span>
+                                <span class="tag is-dark"
+                                    >{{ post.year }} Season</span
+                                >
                             </div>
                         </div>
                     </div>
@@ -45,9 +47,20 @@ export default {
     props: {
         home: {
             type: Boolean,
-            default: false
-        }
-    }
+            default: false,
+        },
+        year: {
+            type: String,
+            default: "" + new Date().getFullYear(),
+        },
+    },
+    computed: {
+        yearPosts() {
+            return this.$static.query.posts.filter(
+                (post) => post.data.year == this.year
+            );
+        },
+    },
 };
 </script>
 

@@ -3,41 +3,60 @@
         <h1>Welcome to Full Moon Robotics!</h1>
 
         <p class="notification is-primary">
-            This is the Full Moon Robotics website, the home for all the content produced by our Robot in 3 Days team!
+            Full Moon Robotics is a team of <i>FIRST</i> alumni building a
+            "robot in three days." For the 2021 FRC season, we're making tweaks
+            to our 2020 robot (since <i>FIRST</i> is replaying the 2020 game.)
             Feel free to look around! Most of our content is on
             <g-link to="/blog">our blog</g-link>&nbsp;and
             <a
                 href="https://www.youtube.com/channel/UCv1jpayMcbWAi-hcte3glNg"
                 target="_blank"
-            >our YouTube channel</a>!
+                >our YouTube channel</a
+            >!
         </p>
 
         <div class="notification is-primary">
-            <h4 class="subtitle has-text-centered">Sponsored in 2020 by:</h4>
+            <h4 class="subtitle has-text-centered">Sponsored in 2021 by:</h4>
             <div class="columns is-vcentered is-variable is-8">
                 <div class="column">
-                    <g-image src="~/assets/logos/commerce_cx.png" />
+                    <a href="https://relaygo.com/" target="_blank">
+                        <g-image src="~/assets/logos/relay.svg" />
+                    </a>
+                </div>
+                <div class="column has-text-centered">
+                    <a href="https://www.robodogs.org/" target="_blank">
+                        <g-image src="~/assets/logos/robodogs.svg" />
+                    </a>
                 </div>
                 <div class="column">
-                    <g-image src="~/assets/logos/ncsu_libraries.png" />
-                </div>
-                <div class="column">
-                    <h3>NC State Entrepreneurship</h3>
+                    <a
+                        href="https://entrepreneurship.ncsu.edu/"
+                        target="_blank"
+                    >
+                        <h3>NC State Entrepreneurship</h3>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- <div id="twitch-embed"></div> -->
+        <div id="twitch-embed"></div>
         <!-- Load the Twitch embed script -->
+
+        <p class="notification is-primary has-text-centered">
+            <i class="fa fa-chevron-down fa-lg"></i>&nbsp;
+            <strong>Warning: Outdated content!</strong> Content beneath this box
+            is from our 2020 season.&nbsp;
+            <i class="fa fa-chevron-down fa-lg"></i>
+        </p>
 
         <!-- content view -->
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-8">
                 <div class="tile is-parent">
                     <article class="tile is-child box is-flex">
-                        <p class="title">Robot Reveal</p>
+                        <p class="title">2020 Robot Reveal</p>
                         <p class="subtitle">
-                            Check out our reveal video of our robot,
+                            Check out our reveal video of last year's robot,
                             <i>FM-87</i>!
                         </p>
                         <iframe
@@ -52,7 +71,7 @@
                 <div class="tile">
                     <div class="tile is-parent">
                         <article class="tile is-child box">
-                            <p class="title">Strategy Analysis</p>
+                            <p class="title">2020 Strategy Analysis</p>
                             <iframe
                                 src="https://www.youtube.com/embed/eNwzub_byWA"
                                 frameborder="0"
@@ -62,10 +81,15 @@
                             ></iframe>
                             <div class="content">
                                 <p>
-                                    Here's our strategy recap from day 1!
-                                    Our team performed an analysis based on our own strengths, weaknesses, and constraints.
+                                    Last year, we shot this strategy recap on
+                                    day 1! Our team performed an analysis based
+                                    on our own strengths, weaknesses, and
+                                    constraints.
                                 </p>
-                                <p>We'd love to hear how your team's analysis was different!</p>
+                                <p>
+                                    We'd love to hear how your team's analysis
+                                    was different!
+                                </p>
                             </div>
                         </article>
                     </div>
@@ -96,9 +120,9 @@
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <div class="content">
-                        <p class="title">Blog Posts</p>
+                        <p class="title">2020 Blog Posts</p>
                         <p class="subtitle">From our Text-Media team</p>
-                        <BlogPostList :home="true" />
+                        <BlogPostList year="2020" :home="true" />
                     </div>
                 </article>
             </div>
@@ -112,7 +136,7 @@ import BlogPostList from "~/components/BlogPostList.vue";
 const meta = {
     url: "https://fullmoonrobotics.org/",
     description:
-        "This is the homepage for the Full Moon Robotics Robot in 3 Days Team."
+        "This is the homepage for the Full Moon Robotics Robot in 3 Days Team.",
 };
 
 export default {
@@ -123,16 +147,16 @@ export default {
             { property: "twitter:url", content: meta.url },
             {
                 property: "og:title",
-                content: `Home - Full Moon Robotics`
+                content: `Home - Full Moon Robotics`,
             },
             {
                 property: "twitter:title",
-                content: `Home - Full Moon Robotics`
+                content: `Home - Full Moon Robotics`,
             },
             { name: "description", content: meta.description },
             { property: "og:description", content: meta.description },
-            { property: "twitter:description", content: meta.description }
-        ]
+            { property: "twitter:description", content: meta.description },
+        ],
     },
     mounted() {
         // import("~/../lib/twitch-embed.v1.min.js").then(m => {
@@ -145,8 +169,8 @@ export default {
         // });
     },
     components: {
-        BlogPostList
-    }
+        BlogPostList,
+    },
 };
 </script>
 

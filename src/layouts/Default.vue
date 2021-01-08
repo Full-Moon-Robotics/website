@@ -15,25 +15,22 @@
                     <div class="column">
                         <p>
                             Full Moon Robotics is organized by the
-                            <a
-                                href="https://firstalumniatncstate.org"
-                            >
+                            <a href="https://firstalumniatncstate.org">
                                 <strong>
-                                    <i>FIRST</i> Alumni Association at NC
-                                    State
-                                </strong>
-                            </a>. We are a student organization of
-                            <a
-                                href="https://ncsu.edu"
-                            >North Carolina State University</a>. We work closely with
+                                    <i>FIRST</i> Alumni Association at NC State
+                                </strong> </a
+                            >. We are a student organization of
+                            <a href="https://ncsu.edu"
+                                >North Carolina State University</a
+                            >. We work closely with
                             <a href="http://www.firstnorthcarolina.org">
                                 <i>FIRST</i> North Carolina
                             </a>
                             and
                             <a href="https://www.ece.ncsu.edu/">
                                 NC State's Electrical and Computing Engineering
-                                Department
-                            </a>.
+                                Department </a
+                            >.
                         </p>
                     </div>
                 </div>
@@ -41,7 +38,8 @@
                 <p class="is-size-7">
                     Website design by
                     <a href="https://samweaver.com">Sam Weaver</a>
-                    , &copy; 2019 - {{ new Date().getFullYear() }}
+                    , &copy; FMR Contributors 2019 -
+                    {{ new Date().getFullYear() }}
                 </p>
             </div>
         </footer>
