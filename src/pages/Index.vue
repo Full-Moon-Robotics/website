@@ -5,9 +5,12 @@
         <p class="notification is-primary">
             Full Moon Robotics is a team of <i>FIRST</i> alumni based at
             <a href="https://www.ncsu.edu">North Carolina State University</a>
-            building a "robot in three days." For the 2021 FRC season, we're
-            making tweaks to our 2020 robot (since <i>FIRST</i> is replaying the
-            2020 game.) Feel free to look around! Most of our content is on
+            building a "robot in three days."
+            <a href="/Press_Release_Ri3D_2021.pdf" target="_blank"
+                >(Press Release)</a
+            >. For the 2021 FRC season, we're making tweaks to our 2020 robot
+            (since <i>FIRST</i> is replaying the 2020 game.) Feel free to look
+            around! Most of our content is on
             <g-link to="/blog">our blog</g-link>&nbsp;and
             <a
                 href="https://www.youtube.com/channel/UCv1jpayMcbWAi-hcte3glNg"
