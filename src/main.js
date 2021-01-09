@@ -3,6 +3,7 @@
 
 // Import plugins and libraries
 import Buefy from "buefy";
+import VueAwesomeCountdown from "vue-awesome-countdown";
 
 // Import components
 import Navbar from "~/components/Navbar.vue";
@@ -27,6 +28,9 @@ export default function(Vue, { router, head, isClient }) {
     Vue.use(Buefy, {
         defaultIconPack: "fas", // Font Awesome Solid
     });
+
+    // Use the countdown library
+    Vue.use(VueAwesomeCountdown);
 
     // Make the Navbar component available on all pages
     Vue.component("Navbar", Navbar);

@@ -43,6 +43,26 @@
         <div id="twitch-embed"></div>
         <!-- Load the Twitch embed script -->
 
+        <p class="notification is-primary has-text-centered is-size-2">
+            <i class="fa fa-chevron-up fa-lg"></i>&nbsp;
+            <span>
+                {{ streamTimerMessage }}
+                <countdown :end-time="streamTimerEnd">
+                    <span slot="process" slot-scope="{ timeObj }">{{
+                        `${timeObj.d == "0" ? "" : timeObj.d + ":"}${
+                            timeObj.h
+                        }:${timeObj.m}:${timeObj.s}`
+                    }}</span>
+                    <span slot="finish">{{
+                        streamTimerMessage == ""
+                            ? "Stream is " + streamTimerTense
+                            : "... now!"
+                    }}</span>
+                </countdown> </span
+            >&nbsp;
+            <i class="fa fa-chevron-up fa-lg"></i>
+        </p>
+
         <p class="notification is-primary has-text-centered">
             <i class="fa fa-chevron-down fa-lg"></i>&nbsp;
             <strong>Warning: Outdated content!</strong> Content beneath this box
@@ -133,6 +153,11 @@
 
 <script>
 import BlogPostList from "~/components/BlogPostList.vue";
+import moment from "moment";
+
+const streamStart = moment("2021-01-09 13:00:00-05:00");
+const streamEnd = moment("2021-01-09 22:00:00-05:00");
+const finalStretch = false;
 
 const meta = {
     url: "https://fullmoonrobotics.org/",
@@ -167,6 +192,23 @@ export default {
             channel: "fullmoonrobotics",
             parent: ["fullmoonrobotics.org"],
         });
+    },
+    computed: {
+        streamTimerMessage() {
+            if (moment().isBefore(streamStart)) return "Stream starts in ";
+            else if (finalStretch && moment().isBefore(streamEnd))
+                return "Stream ends in ";
+            else return "";
+        },
+        streamTimerTense() {
+            if (moment().isBefore(streamEnd)) return "live!";
+            else return "offline.";
+        },
+        streamTimerEnd() {
+            if (moment().isBefore(streamStart) || !finalStretch)
+                return streamStart.toDate();
+            else return streamEnd.toDate();
+        },
     },
     components: {
         BlogPostList,
