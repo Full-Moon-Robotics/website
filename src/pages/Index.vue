@@ -158,7 +158,7 @@
 import BlogPostList from "~/components/BlogPostList.vue";
 import moment from "moment";
 
-const streamStart = moment("2021-01-09 13:00:00-05:00");
+const streamStart = moment("2021-01-09 13:15:00-05:00");
 const streamEnd = moment("2021-01-09 22:00:00-05:00");
 const finalStretch = false;
 
