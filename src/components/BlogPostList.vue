@@ -30,7 +30,11 @@
                     <div class="card-content tag-container">
                         <div class="media">
                             <div class="media-content">
-                                <span class="tag is-dark"
+                                <span
+                                    class="tag is-dark"
+                                    :class="{
+                                        'is-ncsu': post.year == currentYear,
+                                    }"
                                     >{{ post.year }} Season</span
                                 >
                             </div>
@@ -51,13 +55,16 @@ export default {
         },
         year: {
             type: String,
-            default: "" + new Date().getFullYear(),
+            default: "all",
         },
     },
     computed: {
+        currentYear() {
+            return new Date().getFullYear();
+        },
         yearPosts() {
-            return this.$static.query.posts.filter(
-                (post) => post.data.year == this.year
+            return this.$static.query.posts.filter((post) =>
+                this.year == "all" ? true : post.data.year == this.year
             );
         },
     },

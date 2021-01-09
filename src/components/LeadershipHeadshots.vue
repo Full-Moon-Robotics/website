@@ -6,14 +6,25 @@
 import MemberHeadshots from "~/components/MemberHeadshots.vue";
 
 export default {
+    props: ["year"],
     components: {
-        MemberHeadshots
+        MemberHeadshots,
     },
     computed: {
         leadership() {
-            return this.$static.leadership.members.map(entry => entry.data);
-        }
-    }
+            return this.$static.leadership.members
+                .map((entry) => entry.data)
+                .filter(
+                    function(entry) {
+                        console.log(this.year);
+                        return entry.yearsActive.indexOf(this.year) > -1;
+                    }.bind(this)
+                );
+        },
+    },
+    mounted() {
+        console.log(this.leadership);
+    },
 };
 </script>
 
@@ -21,12 +32,12 @@ export default {
 query {
     leadership: allContentfulTeamMember(filter: {
         leadership: { eq: true },
-        yearsActive: { contains: ["2020"] }
     }) {
         members: edges {
             data: node {
                 name,
                 title,
+                yearsActive,
                 profilePhoto {
                     file {
                         image: url
