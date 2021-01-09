@@ -3,7 +3,10 @@
         <template slot="brand">
             <div class="navbar-item">
                 <g-link to="/">
-                    <g-image alt="Full Moon Robotics" src="~/assets/text_logo.png" />
+                    <g-image
+                        alt="Full Moon Robotics"
+                        src="~/assets/text_logo.png"
+                    />
                 </g-link>
             </div>
         </template>
@@ -13,7 +16,8 @@
                 v-for="(link, i) in $static.navbar.links"
                 :key="i"
                 :to="link.data.url"
-            >{{ link.data.name }}</g-link>
+                >{{ link.data.name }}</g-link
+            >
         </template>
         <template slot="end">
             <div class="navbar-item">
@@ -44,6 +48,33 @@
                     class="icon has-text-white is-medium"
                 >
                     <i class="fab fa-github fa-lg"></i>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a
+                    href="https://twitter.com/fullmoon_ri3d/"
+                    target="_blank"
+                    class="icon has-text-white is-medium"
+                >
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a
+                    href="https://instagram.com/fullmoonrobotics/"
+                    target="_blank"
+                    class="icon has-text-white is-medium"
+                >
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a
+                    href="https://www.facebook.com/fullmoonrobotics"
+                    target="_blank"
+                    class="icon has-text-white is-medium"
+                >
+                    <i class="fab fa-facebook fa-lg"></i>
                 </a>
             </div>
         </template>
