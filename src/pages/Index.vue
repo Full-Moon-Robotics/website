@@ -67,7 +67,7 @@
         </p>
         
         <div class="notification is-primary">
-            <BlogPostList year="2021" :home="true" />
+            <BlogPostList year="2021" :home="false" />
         </div>
 
         <p class="notification is-primary has-text-centered">
