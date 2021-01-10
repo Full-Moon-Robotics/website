@@ -65,6 +65,10 @@
             >&nbsp;
             <i class="fa fa-chevron-up fa-lg"></i>
         </p>
+        
+        <div class="notification is-primary">
+            <BlogPostList year="2021" :home="true" />
+        </div>
 
         <p class="notification is-primary has-text-centered">
             <i class="fa fa-chevron-down fa-lg"></i>&nbsp;
