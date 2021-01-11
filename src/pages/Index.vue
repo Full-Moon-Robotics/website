@@ -65,7 +65,7 @@
             >&nbsp;
             <i class="fa fa-chevron-up fa-lg"></i>
         </p>
-        
+
         <div class="notification is-primary">
             <BlogPostList year="2021" :home="false" />
         </div>
@@ -162,8 +162,8 @@
 import BlogPostList from "~/components/BlogPostList.vue";
 import moment from "moment";
 
-const streamStart = moment("2021-01-10 09:15:00-05:00");
-const streamEnd = moment("2021-01-10 22:00:00-05:00");
+const streamStart = moment("2021-01-11 09:15:00-05:00");
+const streamEnd = moment("2021-01-11 22:00:00-05:00");
 const finalStretch = false;
 
 const meta = {

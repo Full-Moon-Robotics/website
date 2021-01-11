@@ -6,7 +6,12 @@
         </h1>
         <div v-html="richTextToHTML($page.page.content)"></div>
         <br />
-        <h4 class="subtitle">Authors:</h4>
+        <h4
+            class="subtitle"
+            v-if="$page.page.authors && $page.page.authors.length > 0"
+        >
+            Authors:
+        </h4>
         <MemberHeadshots :members="$page.page.authors" />
     </Layout>
 </template>
@@ -21,20 +26,24 @@ export default {
         richTextToHTML(content) {
             return documentToHtmlString(content, {
                 renderNode: {
-                    [BLOCKS.EMBEDDED_ASSET]: node => {
-                        return `<img src="${node.data.target.fields.file.url}" alt="${node.data.target.fields.title}" />`;
-                    }
-                }
+                    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+                        return `<img src="${
+                            node.data.target.fields.file.url
+                        }" alt="${node.data.target.fields.title}" />`;
+                    },
+                },
             });
-        }
+        },
     },
     components: {
-        MemberHeadshots
+        MemberHeadshots,
     },
     metaInfo() {
         const title = `${this.$page.page.title} - ${this.$page.page.year} Blog`;
         const description = `${this.$page.page.description}`;
-        const url = `https://fullmoonrobotics.org/blog/${this.$page.page.year}/${this.$page.page.slug}/`;
+        const url = `https://fullmoonrobotics.org/blog/${
+            this.$page.page.year
+        }/${this.$page.page.slug}/`;
         return {
             title,
             meta: [
@@ -42,18 +51,18 @@ export default {
                 { property: "twitter:url", content: url },
                 {
                     property: "og:title",
-                    content: `${title} - Full Moon Robotics`
+                    content: `${title} - Full Moon Robotics`,
                 },
                 {
                     property: "twitter:title",
-                    content: `${title} - Full Moon Robotics`
+                    content: `${title} - Full Moon Robotics`,
                 },
                 { name: "description", content: description },
                 { property: "og:description", content: description },
-                { property: "twitter:description", content: description }
-            ]
+                { property: "twitter:description", content: description },
+            ],
         };
-    }
+    },
 };
 </script>
 
