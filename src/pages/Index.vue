@@ -40,6 +40,9 @@
                         <h3>NC State Entrepreneurship</h3>
                     </a>
                 </div>
+                <div class="column has-text-centered">
+                    <g-image src="~/assets/logos/kjb.png" />
+                </div>
             </div>
         </div>
 
