@@ -27,9 +27,12 @@ export default {
             return documentToHtmlString(content, {
                 renderNode: {
                     [BLOCKS.EMBEDDED_ASSET]: (node) => {
-                        return `<img src="${
-                            node.data.target.fields.file.url
-                        }" alt="${node.data.target.fields.title}" />`;
+                        return `
+                        <div class="blog-post-image-container">
+                            <img class="blog-post-image" src="${
+                                node.data.target.fields.file.url
+                            }" alt="${node.data.target.fields.title}" />
+                        </div>`;
                     },
                 },
             });
@@ -66,7 +69,18 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.blog-post-image-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 1em;
+}
+
+.blog-post-image {
+    max-width: 500px;
+    margin: 0 auto;
+}
+</style>
 
 <page-query>
 query ($id: ID!) {
