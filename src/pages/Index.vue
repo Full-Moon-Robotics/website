@@ -8,7 +8,7 @@
             building a "robot in three days."
             <a href="/Press_Release_Ri3D_2021.pdf" target="_blank"
                 >(Press Release)</a
-            >. For the 2021 FRC season, we're making tweaks to our 2020 robot
+            >. For the 2021 FRC season, we made tweaks to our 2020 robot
             (since <i>FIRST</i> is replaying the 2020 game.) Feel free to look
             around! Most of our content is on
             <g-link to="/blog">our blog</g-link>&nbsp;and
@@ -43,10 +43,10 @@
             </div>
         </div>
 
-        <div id="twitch-embed"></div>
+        <!-- <div id="twitch-embed"></div> -->
         <!-- Load the Twitch embed script -->
 
-        <p class="notification is-primary has-text-centered is-size-2">
+        <!-- <p class="notification is-primary has-text-centered is-size-2">
             <i class="fa fa-chevron-up fa-lg"></i>&nbsp;
             <span>
                 {{ streamTimerMessage }}
@@ -64,31 +64,31 @@
                 </countdown> </span
             >&nbsp;
             <i class="fa fa-chevron-up fa-lg"></i>
-        </p>
+        </p> -->
 
-        <div class="notification is-primary">
-            <BlogPostList year="2021" :home="false" />
-        </div>
+        <!-- <div class="notification is-primary">
+            <BlogPostList year="2022" :home="false" />
+        </div> -->
 
-        <p class="notification is-primary has-text-centered">
+        <!-- <p class="notification is-primary has-text-centered">
             <i class="fa fa-chevron-down fa-lg"></i>&nbsp;
             <strong>Warning: Outdated content!</strong> Content beneath this box
-            is from our 2020 season.&nbsp;
+            is from our 2021 season.&nbsp;
             <i class="fa fa-chevron-down fa-lg"></i>
-        </p>
+        </p> -->
 
         <!-- content view -->
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-8">
                 <div class="tile is-parent">
                     <article class="tile is-child box is-flex">
-                        <p class="title">2020 Robot Reveal</p>
+                        <p class="title">2021 Robot Reveal</p>
                         <p class="subtitle">
-                            Check out our reveal video of last year's robot,
-                            <i>FM-87</i>!
+                            Check out our reveal video of this year's robot,
+                            <i>Blue Moon</i>!
                         </p>
                         <iframe
-                            src="https://www.youtube.com/embed/4T5FBxpCVi0"
+                            src="https://www.youtube.com/embed/dbUG4PAihy0"
                             frameborder="0"
                             allow="picture-in-picture"
                             allowfullscreen
@@ -99,9 +99,9 @@
                 <div class="tile">
                     <div class="tile is-parent">
                         <article class="tile is-child box">
-                            <p class="title">2020 Strategy Analysis</p>
+                            <p class="title">Interviews with Teams FRC 5243 &amp; FTC 10515</p>
                             <iframe
-                                src="https://www.youtube.com/embed/eNwzub_byWA"
+                                src="https://www.youtube.com/embed/K4gveY9tP1M"
                                 frameborder="0"
                                 allow="picture-in-picture"
                                 allowfullscreen
@@ -109,23 +109,19 @@
                             ></iframe>
                             <div class="content">
                                 <p>
-                                    Last year, we shot this strategy recap on
-                                    day 1! Our team performed an analysis based
-                                    on our own strengths, weaknesses, and
-                                    constraints.
+                                    This year, we interviewed two <i>FIRST</i> teams about their experience meeting virtually and preparing for this different season. Meet FRC Team 5243, Aegis Robotics, and FTC Team 10515, Xtreme Voltage!
                                 </p>
                                 <p>
-                                    We'd love to hear how your team's analysis
-                                    was different!
+                                    If you're interested in being interviewed next year, reach out to our parent organization at <a href="https://firstalumniatncstate.org/#contact-us" target="_blank">our website</a>!
                                 </p>
                             </div>
                         </article>
                     </div>
                     <div class="tile is-parent is-vertical">
                         <article class="tile is-child box">
-                            <p class="title">Electrical Tutorial</p>
+                            <p class="title">Drive Station Setup</p>
                             <iframe
-                                src="https://www.youtube.com/embed/ucDjqIOgbVE"
+                                src="https://www.youtube.com/embed/xStkODcg7ic"
                                 frameborder="0"
                                 allow="picture-in-picture"
                                 allowfullscreen
@@ -133,9 +129,19 @@
                             ></iframe>
                         </article>
                         <article class="tile is-child box">
-                            <p class="title">Programming Tutorial</p>
+                            <p class="title">Git Tutorial</p>
                             <iframe
-                                src="https://www.youtube.com/embed/vvwom90aQ-w"
+                                src="https://www.youtube.com/embed/TQWBeasJoF4"
+                                frameborder="0"
+                                allow="picture-in-picture"
+                                allowfullscreen
+                                style="max-height:100%;"
+                            ></iframe>
+                        </article>
+                        <article class="tile is-child box">
+                            <p class="title">Final Day Recap</p>
+                            <iframe
+                                src="https://www.youtube.com/embed/6NS4cMWPedE"
                                 frameborder="0"
                                 allow="picture-in-picture"
                                 allowfullscreen
@@ -148,9 +154,9 @@
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <div class="content">
-                        <p class="title">2020 Blog Posts</p>
-                        <p class="subtitle">From our Text-Media team</p>
-                        <BlogPostList year="2020" :home="true" />
+                        <p class="title">2021 Blog Posts</p>
+                        <p class="subtitle">From our Documentation team</p>
+                        <BlogPostList year="2021" :home="true" />
                     </div>
                 </article>
             </div>
@@ -162,9 +168,9 @@
 import BlogPostList from "~/components/BlogPostList.vue";
 import moment from "moment";
 
-const streamStart = moment("2021-01-12 09:15:00-05:00");
-const streamEnd = moment("2021-01-12 1:30:00-05:00");
-const finalStretch = false;
+// const streamStart = moment("2021-01-12 09:15:00-05:00");
+// const streamEnd = moment("2021-01-12 1:30:00-05:00");
+// const finalStretch = false;
 
 const meta = {
     url: "https://fullmoonrobotics.org/",
@@ -192,30 +198,30 @@ export default {
         ],
     },
     mounted() {
-        new window.Twitch.Embed("twitch-embed", {
-            width: "100%",
-            height: 640,
-            theme: "dark",
-            channel: "fullmoonrobotics",
-            parent: ["fullmoonrobotics.org"],
-        });
+        // new window.Twitch.Embed("twitch-embed", {
+        //     width: "100%",
+        //     height: 640,
+        //     theme: "dark",
+        //     channel: "fullmoonrobotics",
+        //     parent: ["fullmoonrobotics.org"],
+        // });
     },
     computed: {
-        streamTimerMessage() {
-            if (moment().isBefore(streamStart)) return "Stream starts in ";
-            else if (finalStretch && moment().isBefore(streamEnd))
-                return "Stream ends in ";
-            else return "";
-        },
-        streamTimerTense() {
-            if (moment().isBefore(streamEnd)) return "live!";
-            else return "offline.";
-        },
-        streamTimerEnd() {
-            if (moment().isBefore(streamStart) || !finalStretch)
-                return streamStart.toDate();
-            else return streamEnd.toDate();
-        },
+        // streamTimerMessage() {
+        //     if (moment().isBefore(streamStart)) return "Stream starts in ";
+        //     else if (finalStretch && moment().isBefore(streamEnd))
+        //         return "Stream ends in ";
+        //     else return "";
+        // },
+        // streamTimerTense() {
+        //     if (moment().isBefore(streamEnd)) return "live!";
+        //     else return "offline.";
+        // },
+        // streamTimerEnd() {
+        //     if (moment().isBefore(streamStart) || !finalStretch)
+        //         return streamStart.toDate();
+        //     else return streamEnd.toDate();
+        // },
     },
     components: {
         BlogPostList,
