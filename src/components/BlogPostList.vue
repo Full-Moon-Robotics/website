@@ -43,6 +43,7 @@
                 </div>
             </g-link>
         </div>
+        <em class="subtitle" id="no-posts-warning" v-if="yearPosts.length == 0">There are no posts yet... Check back soon!</em>
     </div>
 </template>
 
@@ -111,6 +112,11 @@ figure {
     p {
         color: $scheme-invert;
     }
+}
+
+#no-posts-warning {
+    margin: auto;
+    margin-bottom: 0.5em;
 }
 </style>
 

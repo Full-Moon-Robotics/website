@@ -8,8 +8,7 @@
             building a "robot in three days."
             <a href="/Press_Release_Ri3D_2021.pdf" target="_blank"
                 >(Press Release)</a
-            >. For the 2021 FRC season, we made tweaks to our 2020 robot
-            (since <i>FIRST</i> is replaying the 2020 game.) Feel free to look
+            >. We are currently gearing up for the 2022 FRC season. Feel free to look
             around! Most of our content is on
             <g-link to="/blog">our blog</g-link>&nbsp;and
             <a
@@ -43,10 +42,10 @@
             </div>
         </div>
 
-        <!-- <div id="twitch-embed"></div> -->
+        <div id="twitch-embed"></div>
         <!-- Load the Twitch embed script -->
 
-        <!-- <p class="notification is-primary has-text-centered is-size-2">
+        <p class="notification is-primary has-text-centered is-size-2">
             <i class="fa fa-chevron-up fa-lg"></i>&nbsp;
             <span>
                 {{ streamTimerMessage }}
@@ -64,18 +63,19 @@
                 </countdown> </span
             >&nbsp;
             <i class="fa fa-chevron-up fa-lg"></i>
-        </p> -->
+        </p>
 
-        <!-- <div class="notification is-primary">
+        <div class="box">
+            <p class="title has-text-centered">2022 Blog Posts</p>
             <BlogPostList year="2022" :home="false" />
-        </div> -->
+        </div>
 
-        <!-- <p class="notification is-primary has-text-centered">
+        <p class="notification is-primary has-text-centered">
             <i class="fa fa-chevron-down fa-lg"></i>&nbsp;
             <strong>Warning: Outdated content!</strong> Content beneath this box
             is from our 2021 season.&nbsp;
             <i class="fa fa-chevron-down fa-lg"></i>
-        </p> -->
+        </p>
 
         <!-- content view -->
         <div class="tile is-ancestor">
@@ -168,9 +168,9 @@
 import BlogPostList from "~/components/BlogPostList.vue";
 import moment from "moment";
 
-// const streamStart = moment("2021-01-12 09:15:00-05:00");
-// const streamEnd = moment("2021-01-12 1:30:00-05:00");
-// const finalStretch = false;
+const streamStart = moment("2022-01-08 13:00:00-05:00");
+const streamEnd = moment("2022-01-11 13:00:00-05:00");
+const finalStretch = false;
 
 const meta = {
     url: "https://fullmoonrobotics.org/",
@@ -198,30 +198,30 @@ export default {
         ],
     },
     mounted() {
-        // new window.Twitch.Embed("twitch-embed", {
-        //     width: "100%",
-        //     height: 640,
-        //     theme: "dark",
-        //     channel: "fullmoonrobotics",
-        //     parent: ["fullmoonrobotics.org"],
-        // });
+        new window.Twitch.Embed("twitch-embed", {
+            width: "100%",
+            height: 640,
+            theme: "dark",
+            channel: "fullmoonrobotics",
+            parent: ["fullmoonrobotics.org"],
+        });
     },
     computed: {
-        // streamTimerMessage() {
-        //     if (moment().isBefore(streamStart)) return "Stream starts in ";
-        //     else if (finalStretch && moment().isBefore(streamEnd))
-        //         return "Stream ends in ";
-        //     else return "";
-        // },
-        // streamTimerTense() {
-        //     if (moment().isBefore(streamEnd)) return "live!";
-        //     else return "offline.";
-        // },
-        // streamTimerEnd() {
-        //     if (moment().isBefore(streamStart) || !finalStretch)
-        //         return streamStart.toDate();
-        //     else return streamEnd.toDate();
-        // },
+        streamTimerMessage() {
+            if (moment().isBefore(streamStart)) return "Stream starts in ";
+            else if (finalStretch && moment().isBefore(streamEnd))
+                 return "Stream ends in ";
+            else return "";
+        },
+        streamTimerTense() {
+            if (moment().isBefore(streamEnd)) return "live!";
+            else return "offline.";
+        },
+        streamTimerEnd() {
+            if (moment().isBefore(streamStart) || !finalStretch)
+                return streamStart.toDate();
+            else return streamEnd.toDate();
+        },
     },
     components: {
         BlogPostList,
