@@ -4,9 +4,9 @@
 
         <p class="notification is-primary">
             Full Moon Robotics is a team of <i>FIRST</i> alumni based at
-            <a href="https://www.ncsu.edu">North Carolina State University</a>
+            <a href="https://www.ncsu.edu" target="_blank">North Carolina State University</a>
             building a "robot in three days."
-            <a href="/Press_Release_Ri3D_2021.pdf" target="_blank"
+            <a href="/Full%20Moon%20Robotics%20Ri3D%202022%20Press%20Release.pdf" target="_blank"
                 >(Press Release)</a
             >. We are currently gearing up for the 2022 FRC season. Feel free to look
             around! Most of our content is on
@@ -19,7 +19,7 @@
         </p>
 
         <div class="notification is-primary">
-            <h4 class="subtitle has-text-centered">Sponsored in 2021 by:</h4>
+            <h4 class="subtitle has-text-centered">Sponsored in 2022 by:</h4>
             <div class="columns is-vcentered is-variable is-8">
                 <div class="column">
                     <a href="https://relaygo.com/" target="_blank">
@@ -76,6 +76,7 @@
             is from our 2021 season.&nbsp;
             <i class="fa fa-chevron-down fa-lg"></i>
         </p>
+        
 
         <!-- content view -->
         <div class="tile is-ancestor">
@@ -159,6 +160,29 @@
                         <BlogPostList year="2021" :home="true" />
                     </div>
                 </article>
+            </div>
+        </div>
+        <div class="notification is-primary">
+            <h4 class="subtitle has-text-centered">Sponsored in 2021 by:</h4>
+            <div class="columns is-vcentered is-variable is-8">
+                <div class="column">
+                    <a href="https://relaygo.com/" target="_blank">
+                        <g-image src="~/assets/logos/relay.svg" />
+                    </a>
+                </div>
+                <div class="column has-text-centered">
+                    <a href="https://www.robodogs.org/" target="_blank">
+                        <g-image src="~/assets/logos/robodogs.svg" />
+                    </a>
+                </div>
+                <div class="column">
+                    <a
+                        href="https://entrepreneurship.ncsu.edu/"
+                        target="_blank"
+                    >
+                        <h3>NC State Entrepreneurship</h3>
+                    </a>
+                </div>
             </div>
         </div>
     </Layout>
