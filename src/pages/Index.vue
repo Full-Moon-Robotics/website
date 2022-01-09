@@ -219,6 +219,7 @@ export default {
             { name: "description", content: meta.description },
             { property: "og:description", content: meta.description },
             { property: "twitter:description", content: meta.description },
+            { name: "google-site-verification", content: "Hr3CYS2MQt-PnqeHMSmolo5hPpQr6cedB3Y084BtWWc" }
         ],
     },
     mounted() {
