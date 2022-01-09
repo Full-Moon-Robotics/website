@@ -117,11 +117,12 @@ query {
     metadata {
         siteName
     }
-    navbar: allContentfulNavbarItem {
+    navbar: allContentfulNavbarItem(sort: [{by: "order", order: ASC}]) {
         links: edges {
             data: node {
                 name: itemName
                 url: urlPath
+                order
             }
         }
     }

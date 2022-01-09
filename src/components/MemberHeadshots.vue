@@ -3,14 +3,14 @@
         <div class="column is-2" v-for="(member, i) in members" :key="i">
             <div class="card">
                 <div class="card-image">
-                    <figure class="image is-1by1">
-                        <g-image
+                    <figure class="image is-1by1 headshot" :style="{ 'background-image': `url('${member.profilePhoto.file.image}')` }">
+                        <!-- <g-image
                             :src="member.profilePhoto.file.image"
-                            width="480"
-                            height="480"
                             :alt="member.name"
-                            fit="outside"
-                        />
+                            width="400"
+                            height="400"
+                            fit="cover"
+                        /> -->
                     </figure>
                 </div>
                 <div class="card-content">
@@ -23,7 +23,7 @@
                 <div class="card-content">
                     <div class="media">
                         <div class="media-content">
-                            <p class="subtitle is-7">{{ member.title }}</p>
+                            <p class="subtitle is-7">{{ JSON.parse(member.titles || "{}")[year] || "" }}</p>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-export default { props: ["members"] };
+export default { props: ["members", "year"] };
 </script>
 
 <style lang="scss" scoped>
@@ -68,5 +68,11 @@ figure {
     p {
         color: $scheme-invert;
     }
+}
+
+.headshot {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 </style>

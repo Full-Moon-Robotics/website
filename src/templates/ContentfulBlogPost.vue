@@ -12,7 +12,7 @@
         >
             Authors:
         </h4>
-        <MemberHeadshots :members="$page.page.authors" />
+        <MemberHeadshots :members="$page.page.authors" :year="$page.page.year.toString()" />
     </Layout>
 </template>
 
@@ -94,6 +94,7 @@ query ($id: ID!) {
         authors {
             name,
             title,
+            titles,
             profilePhoto {
                 file {
                     image: url
