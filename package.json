@@ -12,7 +12,7 @@
         "buefy": "^0.8.8",
         "gridsome": "^0.7.0",
         "moment": "^2.29.1",
-        "node-sass": "^4.13.0",
+        "node-sass": "^7.0.0",
         "sass-loader": "^8.0.0",
         "vue-awesome-countdown": "^1.1.4"
     }
