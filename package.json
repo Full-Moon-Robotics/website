@@ -11,7 +11,7 @@
         "@gridsome/source-contentful": "^0.5.2",
         "buefy": "^0.8.8",
         "gridsome": "^0.7.0",
-        "moment": "^2.29.1",
+        "moment": "^2.29.4",
         "node-sass": "^4.13.0",
         "sass-loader": "^8.0.0",
         "vue-awesome-countdown": "^1.1.4"
